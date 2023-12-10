@@ -68,7 +68,7 @@ class _SearchScreenState extends State<SearchScreen> {
               final searchController = Get.find<SearchController1>();
               return searchController.isLoading.value
                   ? const CircularProgressIndicator()
-                  : searchController.foundedActors.isEmpty
+                  : searchController.foundActors.isEmpty
                       ? SizedBox(
                           width: Get.width / 1.5,
                           child: Column(
@@ -100,13 +100,13 @@ class _SearchScreenState extends State<SearchScreen> {
                           ),
                         )
                       : ListView.separated(
-                          itemCount: searchController.foundedActors.length,
+                          itemCount: searchController.foundActors.length,
                           shrinkWrap: true,
                           physics: const NeverScrollableScrollPhysics(),
                           separatorBuilder: (_, __) =>
                               const SizedBox(height: 24),
                           itemBuilder: (_, index) {
-                            Actor actor = searchController.foundedActors[index];
+                            Actor actor = searchController.foundActors[index];
                             return GestureDetector(
                               onTap: () => Get.to(
                                   () => ActorDetailsScreen(actorId: actor.id)),

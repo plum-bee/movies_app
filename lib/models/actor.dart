@@ -5,7 +5,7 @@ class Actor {
   final int id;
   final String name;
   final String profilePath;
-  late String? biography;
+  final String? biography;
   final List<Movie> knownFor;
 
   Actor({
