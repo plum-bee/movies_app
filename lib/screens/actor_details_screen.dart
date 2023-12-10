@@ -38,7 +38,7 @@ class ActorDetailsScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     height: 500,
-                    child: Image.network(actor.getFoto(), fit: BoxFit.fill),
+                    child: Image.network(actor.getFoto(), fit: BoxFit.cover),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(16.0),
